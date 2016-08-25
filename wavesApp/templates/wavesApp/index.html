@@ -1,9 +1,11 @@
-{% if latest_song_list %}
-    <ul>
-    {% for song in latest_song_list %}
-      <li><a href="{% url 'wavesApp:detail' song.id %}">{{ song.song_text }}</a></li>
-    {% endfor %}
-    </ul>
+<!-- <a href="/wavesApp/register/">Register Here</a>
+<a href="/wavesApp/login/">Login Here</a>
+
+ -->
+ {% if user.is_authenticated %}
+<a href="/wavesApp/logout/">Logout</a><br />
 {% else %}
-    <p>No songs are available.</p>
+<a href="/wavesApp/register/">Register Here</a><br />
+<a href="/wavesApp/login/">Login</a><br />
 {% endif %}
+<a href="/wavesApp/about/">About</a><br/>

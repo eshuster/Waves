@@ -1,0 +1,44 @@
+{% load staticfiles %}
+<html>
+<head>
+  <title>Waves</title>
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<!-- <body>
+  <div class="box">
+     <form action="/create_user/" method="post">
+      <input type="text" name="username" placeholder="username">
+      <input type="text" name="first_name" placeholder="First Name">
+      <input type="text" name="last_name" placeholder="Last Name">
+      <input type="text" name="email" placeholder="email">
+      <input type="submit" value="Search">
+    </form>
+  </div>
+</body> -->
+<body>
+        <h1>Register</h1>
+
+        {% if registered %}
+        <strong>thank you for registering!</strong>
+        <a href="/wavesApp">Return to the homepage.</a><br />
+        {% else %}
+        <strong>register here!</strong><br />
+
+        <form id="user_form" method="post" action="/wavesApp/register/"
+                enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            <!-- Display each form. The as_p method wraps each element in a paragraph
+                 (<p>) element. This ensures each element appears on a new line,
+                 making everything look neater. -->
+            {{ user_form.as_p }}
+            {{ profile_form.as_p }}
+
+            <!-- Provide a button to click to submit the form. -->
+            <input type="submit" name="submit" value="Register" />
+        </form>
+        {% endif %}
+    </body>
+</html>
+
