@@ -7,7 +7,6 @@ class UserProfile(models.Model):
   # The additional attributes we wish to include.
   # picture = models.ImageField(upload_to='profile_images', blank=True)
   likes = models.IntegerField(default=0)
-
   # Override the __unicode__() method to return out something meaningful!
   def __unicode__(self):
       return self.user.username

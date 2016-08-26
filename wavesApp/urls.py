@@ -8,6 +8,7 @@ urlpatterns = [
   url(r'^register/$', views.user_profile.register, name='register'),
   url(r'^login/$', views.user_profile.user_login, name='user_login'),
   url(r'^logout/$', views.user_profile.user_logout, name='user_logout'),
-  url(r'^sc_login/?$', views.soundcloud.authenticate_view, name='authenticate_view'),
+  url(r'^sc_login/?$', views.sound_cloud.sc_login, name='sc_login'),
+  url(r'^to_sc_login/?$', views.sound_cloud.to_sc_login, name='to_sc_login'),
   url(r'^(?P<song_id>[0-9]+)/$', views.song.detail, name='detail'),
 ]
