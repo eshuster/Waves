@@ -1,11 +1,27 @@
-<!-- <a href="/wavesApp/register/">Register Here</a>
-<a href="/wavesApp/login/">Login Here</a>
-
- -->
- {% if user.is_authenticated %}
+<!-- {% if user.is_authenticated %}
 <a href="/wavesApp/logout/">Logout</a><br />
 {% else %}
 <a href="/wavesApp/register/">Register Here</a><br />
 <a href="/wavesApp/login/">Login</a><br />
 {% endif %}
 <a href="/wavesApp/about/">About</a><br/>
+ -->
+
+<!DOCTYPE html>
+
+{% load static %}
+{% load staticfiles %}
+
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static "css/main.css" %}" /> <!-- CSS -->
+  </head>
+  <header class="home-header">
+      <!-- <img src="{% static "images/wavesHomeHeader.png" %}" alt="Picture of Rango" /> -->
+  </header>
+  <body>
+
+
+  </body>
+
+</html>

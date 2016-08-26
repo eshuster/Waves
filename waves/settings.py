@@ -36,8 +36,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
     'wavesApp.apps.WavesappConfig',
+    # 'wavesApp.soundcloud'
     # 'wavesApp'
 ]
 
@@ -120,3 +122,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+SC_API_HOST              = "api.soundcloud.com"
+SC_CONSUMER              = "386feb06a9b569c14bbae4a372fb4a70"
+SC_CONSUMER_SECRET       = "dd58a10608d184ae34606a27b50b02d3"
+SC_CALLBACK_HOST         = "http://127.0.0.1:8000/wavesApp/"
