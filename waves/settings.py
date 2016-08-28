@@ -125,3 +125,8 @@ SC_API_HOST              = "api.soundcloud.com"
 SC_CONSUMER              = "386feb06a9b569c14bbae4a372fb4a70"
 SC_CONSUMER_SECRET       = "dd58a10608d184ae34606a27b50b02d3"
 SC_CALLBACK_HOST         = "http://127.0.0.1:8000/wavesApp/"
+
+SPOTIFY_CLIENT_ID = "8fef3aace75546d78926b92b5ec2c087"
+SPOTIFY_CLIENT_SECRET = "e1a54baf2f644148a480f89b3685564f"
+SPOTIFY_CALLBACK_HOST         = "http://127.0.0.1:8000/wavesApp/"
+

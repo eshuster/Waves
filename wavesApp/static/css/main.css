@@ -1,6 +1,7 @@
 .home-header {
-  width:100%;
+  width:85%;
   height:200px;
+  margin-left: 7.5%;
   border: 2px solid black;
   /*background: url('../images/wavesHomeHeader.png') no-repeat;*/
   /*background-size:100%;*/
