@@ -8,7 +8,7 @@ import spotipy.util as util
 
 def to_spotify_login(request):
   global scope
-  scope = 'user-library-read'
+  scope = 'user-library'
 
   if len(sys.argv) > 1:
     global username
