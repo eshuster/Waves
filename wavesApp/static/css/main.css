@@ -1,2 +1,60 @@
-.me {
-  border: 1px solid red; }
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+  width: 80%;
+  margin-left: 10%; }
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%; }
+
+.header {
+  border: .5px solid green;
+  height: 220px;
+  margin-top: -.5%; }
+  .header .top-bar {
+    border: .5px solid purple;
+    height: 15px;
+    margin-top: -1%;
+    margin-left: -1%;
+    width: 101.7%; }
+
+.aside {
+  height: 475px;
+  margin-top: -1%; }
+
+.footer {
+  margin-top: .5%;
+  border: 1px solid lightgreen; }
+
+.main {
+  text-align: left; }
+
+.aside-1 {
+  border: 1px solid gold; }
+
+.aside-2 {
+  border: 1px solid blue; }
+
+@media all and (min-width: 600px) {
+  .aside {
+    flex: 1 auto; } }
+
+@media all and (min-width: 800px) {
+  .main {
+    flex: 3 0px; }
+  .aside-1 {
+    order: 1; }
+  .main {
+    order: 2; }
+  .aside-2 {
+    order: 3; }
+  .footer {
+    order: 4; } }
