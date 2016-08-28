@@ -5,15 +5,35 @@
 
 <html>
   <head>
-    <link rel="stylesheet" href="{% static "css/main.css" %}" /> <!-- CSS -->
+    <link rel="stylesheet" href="{% static "css/main.css" %}"/>
   </head>
-  <header class="home-header">
 
-  </header>
-  <body>
-    <div class="me">
-      {% block content %}
-      {% endblock %}
-    </div>
-  </body>
+    <body class="main">
+      <div class="wrapper">
+        <header class="header">
+          <div class="top-bar">
+
+          </div>
+        </header>
+
+          {% block content %}
+          {% endblock %}
+
+        <aside class="aside aside-1">
+          aside-1
+        </aside>
+
+        <aside class="aside aside-2">
+          aside-2
+        </aside>
+
+        <footer class="footer">
+          Footer
+        </footer>
+      </div>
+    </body>
 </html>
+
+
+
+
