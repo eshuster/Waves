@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'wavesApp.apps.WavesappConfig'
+    'wavesApp.apps.WavesappConfig',
 ]
 
 MIDDLEWARE = [
@@ -129,4 +129,3 @@ SC_CALLBACK_HOST         = "http://127.0.0.1:8000/wavesApp/"
 SPOTIFY_CLIENT_ID = "8fef3aace75546d78926b92b5ec2c087"
 SPOTIFY_CLIENT_SECRET = "e1a54baf2f644148a480f89b3685564f"
 SPOTIFY_CALLBACK_HOST         = "http://127.0.0.1:8000/wavesApp/"
-
