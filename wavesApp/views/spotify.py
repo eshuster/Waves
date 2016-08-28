@@ -7,8 +7,9 @@ import spotipy.util as util
 
 
 def to_spotify_login(request):
+  current_user = request.user
   global scope
-  scope = 'user-library'
+  scope = 'playlist-modify-public'
 
   if len(sys.argv) > 1:
     global username
@@ -17,12 +18,14 @@ def to_spotify_login(request):
     print("Usage: %s username" % (sys.argv[0],))
     sys.exit()
 
-  global token
+  # global token
   token = util.prompt_for_user_token(username, scope,
                         client_id=settings.SPOTIFY_CLIENT_ID,
                         client_secret=settings.SPOTIFY_CLIENT_SECRET,
-                        redirect_uri='http://127.0.0.1:8000/wavesApp/')
-  return HttpResponseRedirect('/wavesApp/')
+                        redirect_uri='http://127.0.0.1:8000/wavesApp/spotify_login')
+  # print(token)
+  current_user.spotify_access_token = token
+  return HttpResponseRedirect('/wavesApp')
 
 
 def spotify_login(request):
