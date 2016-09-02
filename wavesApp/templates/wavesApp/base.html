@@ -12,23 +12,40 @@
       <div class="wrapper">
         <header class="header">
           <div class="top-bar">
+          </div>
+          <div class="logo-container">
+            <!-- <h1 class="logo">WAVES</h1> -->
+          </div>
+          <div class="hamburger-container">
 
           </div>
         </header>
+      </div>
+      <div class="content-screen-wrapper">
+        <div class="content-screen">
+            {% block content %}
 
-          {% block content %}
-          {% endblock %}
-
+            {% endblock %}
+        </div>
+      </div>
+      <div class="wrapper">
         <aside class="aside aside-1">
-          aside-1
+          {% if current_user_profile_sc_access_token %}
+            <h1>Welcome to SC</h1>
+          {% else %}
+            {{ sc_url |safe }}
+          {% endif %}
         </aside>
 
         <aside class="aside aside-2">
-          aside-2
+          {% if current_user_profile_sc_access_token %}
+            <h1>Welcome to Spotify</h1>
+          {% else %}
+            {{ spotify_url | safe }}
+          {% endif %}
         </aside>
 
         <footer class="footer">
-          Footer
         </footer>
       </div>
     </body>

@@ -1,19 +1,24 @@
 from django.http                    import HttpResponseRedirect, HttpResponse
 from django.conf                    import settings
-from wavesApp.models.user_profile import UserProfile
+from wavesApp.models.user_profile   import UserProfile
+
+from pprint import pprint
+
 
 
 import urllib, cgi, simplejson
 import sys
 import spotipy
 import spotipy.util as util
+from spotipy.oauth2 import SpotifyClientCredentials
+import requests
 
 
 def to_spotify_login(request):
   current_user = request.user
-  print(current_user)
+  # print(current_user)
 
-  global scope
+  # global scope
   scope = 'playlist-modify'
   # scope = 'user-library-read'
 
@@ -23,7 +28,6 @@ def to_spotify_login(request):
     print("Usage: %s username" % (sys.argv[0],))
     sys.exit()
 
-  global token
   token = util.prompt_for_user_token(username, scope,
                         client_id=settings.SPOTIFY_CLIENT_ID,
                         client_secret=settings.SPOTIFY_CLIENT_SECRET,

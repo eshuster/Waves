@@ -6,10 +6,17 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 
 def index(request):
+  # context = {
+  #     'latest_song_list': "nada",
+  #   }
   context = {
-      'latest_song_list': "nada",
-    }
-  return render(request, 'wavesApp/index.html', context)
+        # 'url': '<h1 class="login-to-soundcloud"><a href="to_sc_login">Connect to Soundcloud</a></h1>'
+        }
+
+  return render(request, 'wavesApp/index.html', {
+        'url': '<h1 class="login-to-soundcloud"><a href="to_sc_login">Connect to Soundcloud</a></h1>'
+        })
+  # return render(request, 'wavesApp/index.html', context)
 
 def detail(request, song_id):
   template = loader.get_template('wavesApp/detail.html')

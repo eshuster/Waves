@@ -15,46 +15,74 @@
   padding: 10px;
   flex: 1 100%; }
 
-.header {
-  border: .5px solid green;
-  height: 220px;
-  margin-top: -.5%; }
-  .header .top-bar {
-    border: .5px solid purple;
-    height: 15px;
-    margin-top: -1%;
-    margin-left: -1%;
-    width: 101.7%; }
-
-.aside {
-  height: 475px;
-  margin-top: -1%; }
-
-.footer {
-  margin-top: .5%;
-  border: 1px solid lightgreen; }
+.content-screen-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  height: 400px;
+  width: 80%;
+  margin-left: 10%; }
 
 .main {
   text-align: left; }
-
-.aside-1 {
-  border: 1px solid gold; }
-
-.aside-2 {
-  border: 1px solid blue; }
-
-@media all and (min-width: 600px) {
-  .aside {
-    flex: 1 auto; } }
-
-@media all and (min-width: 800px) {
-  .main {
-    flex: 3 0px; }
-  .aside-1 {
-    order: 1; }
-  .main {
-    order: 2; }
-  .aside-2 {
-    order: 3; }
-  .footer {
-    order: 4; } }
+  .main .header {
+    height: 175px;
+    margin-top: -.5%; }
+    .main .header .top-bar {
+      height: 15px;
+      margin-top: -1%;
+      margin-left: -1%;
+      width: 101.7%;
+      background-image: url("../images/header-bar-1.png"); }
+    .main .header .logo-container {
+      height: 160px;
+      width: 39%;
+      position: absolute;
+      top: 82px;
+      left: 10.5%; }
+      .main .header .logo-container .logo {
+        font-size: 70px;
+        position: absolute;
+        top: 30px;
+        left: 5px;
+        color: purple; }
+    .main .header .hamburger-container {
+      float: right;
+      margin-top: 105px;
+      height: 75px;
+      width: 9%;
+      background-size: 107%; }
+  .main .aside {
+    height: 475px;
+    margin-top: 1%;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray; }
+  .main .aside-1 {
+    border-right: 1px solid gray;
+    margin-right: .5%; }
+  .main .aside-2 {
+    border-left: 1px solid gray;
+    margin-left: .5%; }
+  .main .footer {
+    margin-top: 1.5%;
+    height: 95px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray; }
+  @media all and (min-width: 600px) {
+    .main .aside {
+      flex: 1 auto; } }
+  @media all and (min-width: 800px) {
+    .main .main {
+      flex: 3 0px; }
+    .main .aside-1 {
+      order: 1; }
+    .main .main {
+      order: 2; }
+    .main .aside-2 {
+      order: 3; }
+    .main .footer {
+      order: 4; } }
