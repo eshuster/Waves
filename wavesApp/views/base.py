@@ -21,10 +21,4 @@ def index(request):
 
   return render(request, 'wavesApp/index.html', context)
 
-def detail(request, song_id):
-  template = loader.get_template('wavesApp/detail.html')
-  try:
-    song = get_object_or_404(Song, pk=song_id)
-  except song.DoesNotExist:
-    raise Http404("song does not exist")
-  return render(request, 'wavesApp/detail.html', {'song': song})
+

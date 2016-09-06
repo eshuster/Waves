@@ -12,6 +12,7 @@ urlpatterns = [
   url(r'^to_sc_login/?$', views.sound_cloud.to_sc_login, name='to_sc_login'),
   url(r'^spotify_login/?$', views.spotify.spotify_login, name='spotify_login'),
   url(r'^to_spotify_login/?$', views.spotify.to_spotify_login, name='to_spotify_login'),
-  url(r'^get_liked_songs/?$', views.spotify.get_liked_songs, name='get_liked_songs'),
+  url(r'^current_user/?$', views.spotify.current_user, name='current_user'),
+  url(r'^user_info/?$', views.sound_cloud.user_info, name='user_info'),
   url(r'^(?P<song_id>[0-9]+)/$', views.song.detail, name='detail'),
 ]
